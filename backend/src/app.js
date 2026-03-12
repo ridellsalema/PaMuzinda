@@ -49,13 +49,7 @@ app.use('/api/ratings', ratingsRoutes);
 app.use('/api/messages', messagesRoutes);
 app.use('/api/admin', adminRoutes);
 
-// Catch-all 404 route
-app.use('*', (req, res) => {
-  res.status(404).json({
-    success: false,
-    message: 'Route not found',
-  });
-});
+
 
 // Global Error Handler
 app.use(errorHandler);
