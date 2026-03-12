@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const rateLimit = require('express-rate-limit');
 
-const { register, login, logout } = require('../controllers/auth.controller');
+const { register, login, logout } = require('../controllers/authcontroller');
 const validate = require('../middleware/validate');
 const { registerSchema, loginSchema } = require('../validators/auth.validators');
 const { protect } = require('../middleware/auth');
