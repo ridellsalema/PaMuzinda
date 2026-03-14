@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, useSearchParams, Link } from "react-router"; // using react-router-dom for typical v7
+import { useNavigate, useSearchParams, Link } from "react-router-dom"; // using react-router-dom for typical v7
 import { Home as HomeIcon, Building2, Wrench, Check } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { api } from "../../api/axios";
