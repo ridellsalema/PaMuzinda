@@ -183,10 +183,8 @@ export function ResponsiveNav() {
 
 export default function App() {
   return (
-    <AuthProvider>
-      <div className="min-h-screen w-full bg-gray-50 overflow-x-hidden">
-        <RouterProvider router={router} />
-      </div>
-    </AuthProvider>
+    <div className="min-h-screen w-full bg-gray-50 overflow-x-hidden">
+      <RouterProvider router={router} />
+    </div>
   );
 }
