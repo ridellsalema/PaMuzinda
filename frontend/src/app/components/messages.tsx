@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { ArrowLeft, Send, Link, Image, Search, Phone, Video, MoreVertical } from "lucide-react";
 import { api } from "../../api/axios";
 import { useAuth } from "../../context/AuthContext";
