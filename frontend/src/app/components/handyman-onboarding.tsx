@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { Wrench, ArrowLeft, Check, DollarSign, Briefcase } from "lucide-react";
 
 const skillOptions = ["Plumbing", "Electrical", "Carpentry", "Painting", "General Repairs"];
