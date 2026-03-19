@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { Home as HomeIcon, Building2, Wrench, ArrowRight } from "lucide-react";
 
 export function GetStarted() {
