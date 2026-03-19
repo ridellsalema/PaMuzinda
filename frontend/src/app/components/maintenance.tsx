@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { Wrench, Hammer, Zap, Droplet, Plus, MessageCircle, CheckCircle, Clock, MapPin, Search } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { api } from "../../api/axios";
