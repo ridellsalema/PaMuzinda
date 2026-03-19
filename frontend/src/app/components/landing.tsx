@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { MapPin, Home as HomeIcon, Building2, Bed, Wrench, ArrowRight, Car } from "lucide-react";
 
 const featuredListings = [
