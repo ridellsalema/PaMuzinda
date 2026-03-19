@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { Home as HomeIcon, Building2, Wrench, ChevronRight } from "lucide-react";
 
 const slides = [
