@@ -1,5 +1,6 @@
-import { createBrowserRouter, Outlet } from "react-router";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import { MainLayout } from "./MainLayout";
+import { AuthProvider } from "../context/AuthContext";
 import { Landing } from "./components/landing";
 import { Onboarding } from "./components/onboarding";
 import { Signup } from "./components/signup";
@@ -17,35 +18,39 @@ import { AdminDashboard } from "./components/admin";
 import { HandymanOnboarding } from "./components/handyman-onboarding";
 import { Messages } from "./components/messages";
 
-function RootLayout() {
-  return <Outlet />;
+// Root wraps everything inside the router so useNavigate works everywhere
+function Root() {
+  return (
+    <AuthProvider>
+      <Outlet />
+    </AuthProvider>
+  );
 }
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: RootLayout,
+    element: <Root />,
     children: [
-      { index: true, Component: Landing },
-      { path: "onboarding", Component: Onboarding },
-      { path: "login", Component: Login },
-      { path: "signup", Component: Signup },
-      { path: "get-started", Component: GetStarted },
-      { path: "handyman/onboarding", Component: HandymanOnboarding },
+      { index: true, element: <Landing /> },
+      { path: "onboarding", element: <Onboarding /> },
+      { path: "login", element: <Login /> },
+      { path: "signup", element: <Signup /> },
+      { path: "get-started", element: <GetStarted /> },
+      { path: "handyman/onboarding", element: <HandymanOnboarding /> },
       {
         element: <MainLayout />,
         children: [
-          { index: true, Component: Home },
-          { path: "/home", Component: Home },
-          { path: "/properties", Component: PropertiesPage },
-          { path: "/properties/:id", Component: PropertyDetail },
-          { path: "/profile", Component: Profile },
-          { path: "/applications", Component: Applications },
-          { path: "/landlord", Component: LandlordDashboard },
-          { path: "/maintenance", Component: Maintenance },
-          { path: "/transport", Component: TransportHub },
-          { path: "/admin", Component: AdminDashboard },
-          { path: "messages", Component: Messages },
+          { path: "/home", element: <Home /> },
+          { path: "/properties", element: <PropertiesPage /> },
+          { path: "/properties/:id", element: <PropertyDetail /> },
+          { path: "/profile", element: <Profile /> },
+          { path: "/applications", element: <Applications /> },
+          { path: "/landlord", element: <LandlordDashboard /> },
+          { path: "/maintenance", element: <Maintenance /> },
+          { path: "/transport", element: <TransportHub /> },
+          { path: "/admin", element: <AdminDashboard /> },
+          { path: "messages", element: <Messages /> },
         ],
       },
     ],
