@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router";
+import { useNavigate, Link } from "react-router-dom";
 import { Home as HomeIcon } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 import { api } from "../../api/axios";
